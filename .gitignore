@@ -1,0 +1,6 @@
+
+#java compiled files
+.class
+
+# gcc compiled files
+.out

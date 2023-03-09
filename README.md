@@ -25,31 +25,18 @@ Los que estan en mac/linux, van directo a la seccion de [instalar compiladores](
 # WSL
 [Instrucciones de Microsoft](https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps)
 
-1. Abrir powershell COMO ADMINISTRADOR y escribir 
+1. Abrir powershell COMO ADMINISTRADOR y escribir:
+
 ```powershell
 wsl --install
 ```
- - De aca podemos salta al paso 6 ), pero es recomendable hacer los pasos en el medio ya que va a andar mejor
-2. Reiniciar la compu 
-3. En una terminal de powershell COMO ADMINISTRADOR (si este paso falla, no pasa nada, vamos al siguiente)
+
+2. Reiniciar la compu si nos pide
+
+3. (Opcional, pero hace que ande mas rapido) En una terminal de powershell COMO ADMINISTRADOR (si este paso falla, no pasa nada, vamos al siguiente)
 ```powershell
 wsl --set-default-version 2
 ```
-3. Para descargar Linux tenemos dos opciones, desde la terminal en la que estamos, o desde la Microsoft Store
-    - Descargar desde terminal
-        - En una terminal de PowerShell abierta COMO ADMINISTRADOR (podemos usar la que venimos usando) vamos a listar las distribuciones disponibles
-        ```powershell
-        wsl --list --online
-        ```
-        - Instalamos cualquiera de esta que tengamos ganas, por ejemplo para instalar `Ubuntu`
-        ```powershell
-        wsl --install -d Ubuntu
-        ```
-    - Descargar distribucion de linux. 
-        - Vamos a la [Microsoft Store](https://aka.ms/wslstore) 
-        - Buscamos la distribucion que tengamos ganas
-        - En principio utilicen Ubuntu que es de las mas comunes
-            - De todas formas la unica diferencia es que capaz alguna viene con mas programas instalados, y utilizan un package manager distinto (en vez de `apt`)
 
 # Instalar Compiladores
 - C++ - Podemos elegir el compilador `clang++` o `g++`
@@ -85,22 +72,29 @@ En ambos casos vamos a trabajar todo el codigo en unico archivo para simplificar
 ## C++
 
 ### Compilar
+
 Ambos compiladores funcionan igual, los ejemplos los vamos a escribir con `clang++`, pero basta sustituirlo por `g++` para utilizar el otro compilador
 En la terminal estando parados sobre la misma carpeta que el archivo que queremos compilar
-```
+
+```bash
 clang++ ./archivo.cpp -o ejecutable
 ```
+
 ### Ejecutar
+
 Para ejecutar el programa, parados sorbe la misma carpeta que el archivo que queremos ejecutar
+
 - Si queremos hacer el input a mano `./ejecutable`
 - Si queremos que el input lo tome de un .txt `./ejecutable < ./input.txt`
 - Si queremos que el output lo escriba en un archivo `./ejecutable > ./output.txt`
 - Si queremos que el input lo tome de un archivo y el output lo escriba en un archivo `./ejecutable < ./input.txt > ./output.txt`
 
 ### Debuggear
+
 Para debuggear debemos instalar un debugger, si estan en mac ya deberian tener instalado `lldb`, sino si lo escriben en una terminal y dan enter deberia instalarselo
 
 Si estan en linux
+
 - Si usan clang `sudo apt install -y lldb`
 - Si usan g++ `sudo apt install -y gdb`
 
@@ -109,21 +103,29 @@ Luego si hacemos F5 en vscode, deberia saltar un cartel que nos dice que no tene
 ----------------------------------------
 
 Otra opcion es el viejo y querido
+
 ```c++
 cout << "mi variable" << variable << endl;
 ```
------------------------------------------
+
+----------------------------------------
+
 ## Java
 
 ### Compilar
+
 En la terminal estando parados sobre la misma carpeta que el archivo que queremos compilar
+
 ```bash
 javac ./ejemplo.java
 ```
+
 Esto nos va a generar un archivo `ejemplo.class`
 
 ### Ejecutar
+
 Para ejecutar el programa, parados sorbe la misma carpeta que el archivo que queremos ejecutar
+
 - Si queremos hacer el input a mano `java ./ejemplo`
 - Si queremos que el input lo tome de un .txt `java ./ejemplo < ./input.txt`
 - Si queremos que el output lo escriba en un archivo `java ./ejemplo > ./output.txt`
