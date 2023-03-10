@@ -160,3 +160,5 @@ System.out.println("mi variable: " + variable);
 
 - ## [Qué es un shell?](Que%20es%20un%20shell.md)
 - ## [Uso basico del shell](Uso%20basico.md)
+
+- ## [Uso de VS Code](Uso%20de%20VS%20Code.md)
